@@ -1,0 +1,30 @@
+---
+title: "week8-lab"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+## 1. Load Packages
+```{r}
+library(terra)
+library(sf)
+library(tidyverse)
+library(here)
+library(tmap)
+```
+
+## 2. Create an NDVI function
+```{r}
+# Create an NDVI function
+ndvi_fun = function(nir, red){
+  (nir - red)/(nir + red)
+}
+```
+
+## 3. Compute NDVI for a single scene
+```{r}
+landsat_20180612 <- rast(here("data", "landsat_20180612.tif"))
+
+
+```
